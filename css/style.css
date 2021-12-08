@@ -1,0 +1,190 @@
+body {
+    font-family: 'Roboto', serif;
+    /* background-image: url('../img/rain.jpg'); */
+    background-color: #eadca6;
+    background-size: cover;
+    max-height: 1000px;
+    margin: 0;
+    padding: 0;
+    font-size: 16pt;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 100;
+    position: sticky;
+    top:0;
+    background:#0B0B2D;
+    border-bottom: 3px solid #0B0B2D;
+}
+
+h1{
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 2;
+    color: #0B0B2D
+  }
+
+h3{
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 2;
+    color: #ffffff
+}
+
+h2{
+    font-size: 17pt;
+    text-align: center;
+    padding: 5px;
+  }
+
+p {
+    padding: 0 30px;
+    color: #0B0B2D;
+    text-align: center;
+  }
+
+h4 {
+    padding: 0 30px;
+    color: #ffffff;
+    text-align: center;
+}
+
+  *:focus{
+    border: 2px solid black;
+  }
+
+
+  .nav_item a{
+    padding: 10px;
+    color: #eadca6;
+    text-align: center;
+
+  }
+  
+  .nav_item a:hover, a:focus{
+    color: yellow;
+    -webkit-text-decoration-style: dotted;
+            text-decoration-style: dotted;
+  }
+
+
+  .nav_item_current{ 
+    background-color: #eadca6 ;
+    border: 0.1px solid #eadca6;
+    border-radius: 5%;
+    text-align: center;
+}
+
+  footer{
+    /* position: fixed; */
+    background-color: #0B0B2D;
+    color: white;
+    text-align: center;
+    bottom: 0px;
+    width: 100%;
+  }
+
+
+.nav_links:visited {
+    color: #2196F3;
+  } 
+
+.nav_links:link{
+    display: flex;
+    flex-direction: column;
+    color:rgb(238, 165, 70);
+}
+
+.nav_item{
+  display: flex;
+  flex-direction: column;
+  color:rgb(238, 165, 70);
+}
+
+.section1{
+    margin-left: 0px;
+    margin-top: 0px;
+    text-align: center;
+}
+/* 
+.container3{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin: 10px auto;
+  justify-content: center;
+} */
+
+.indexP{
+  padding-bottom: 40px;
+}
+
+img{
+  border-radius: 10%;
+}
+
+.grid-container{
+  display: grid;
+  grid-column-gap: 30px;
+  grid-template-columns: auto;
+  /* grid-column: 1 / 4; */
+  background-color: rgb(24, 15, 8);
+  padding: 10px;
+  justify-content: center;
+
+}
+
+.orange {
+  background-image: url('../img/OrangeSky.png');
+}
+
+
+.skip a{
+  background: white;
+  color: #080808;;
+  left: 0;
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+  position: absolute;
+  top: -40px;
+}
+
+.skip a:focus{
+  position: fixed;
+  top: 0;
+}
+
+@media screen and (min-width: 800px) {
+  .grid-container{
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 20px;
+    background-color: orange;
+  }
+
+  .nav_links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+  .container3 {
+	display: grid;
+  grid-template-columns: repeat(3, 2fr);
+}
+
+  .container4{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .singapore {
+    flex: 1 1 30%;
+  }
+}
+
