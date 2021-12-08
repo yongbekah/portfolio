@@ -40,7 +40,7 @@
 
     <p>
       If you want to contact me, please send me an email.<br>
-      We can have a coffee chat or a casual zoom call. &#9749; 
+      We can have a coffee chat or a casual zoom call. &#9749;
       <br><br>
       If you click the photo, it redirects to the page which each of photo indicates!
     <br><br>
@@ -50,10 +50,26 @@
         <a href="mailto:rebekahappy05@gmail.com" target="_blank" class="black"><img src="./img/email.jpeg" alt="If you click it leads to send the email" width="260" height="265" class="imm"></a>
         <a href="https://umich.zoom.us/j/3714581872"><img src="./img/zoom.png" alt="It links to the Zoom link" width="260" height="265" class="imm"></a>
         <a href="https://www.instagram.com/dragon0528"><img src="./img/instagram.jpeg" alt="It links to the instagram account of photos" width="260" height="265" class="imm"></a>
-        
+
         <!-- </div> -->
         </div>
+        <div class="contact-form">
+        <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xayvynob" method="post">
+          <fieldset id="fs-frm-inputs">
+            <legend class="legend">Please Write down your contact information if you have any questions!</legend>
+            <label for="full-name">Full Name</label>
+            <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+            <label for="email-address">Email Address</label>
+            <input type="email" name="_replyto" id="email-address" placeholder="example@domain.com" required="">
+            <label for="message">Message</label>
+            <textarea rows="5" name="message" id="message" placeholder="Hello! Please leave a message. I will get back to you soon." required=""></textarea>
+            <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+          </fieldset>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
     </main>
+
     <footer>
       <h2>University of Michigan School of Information <br/>
         &copy; Rebekah Yonghee Lim </h2>
