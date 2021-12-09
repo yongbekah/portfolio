@@ -1,20 +1,20 @@
 body {
-    font-family: 'Roboto', serif;
+    font-family: 'roboto', 'lato';
     /* background-image: url('../img/rain.jpg'); */
-    background-color: #ddf3f7;
+    background-color: #F9F9FF;
+    /* background-color: #eadca6; */
     background-size: cover;
     max-height: 1000px;
     margin: 0;
     padding: 0;
-    font-size: 16pt;
+    font-size: 13pt;
 }
 
 
-header {
+.navbar {
     display: flex;
     align-items: center;
     flex-direction: column;
-    z-index: 100;
     position: sticky;
     top:0;
     background:#0B0B2D;
@@ -28,18 +28,18 @@ h1{
     color: #0B0B2D
   }
 
+h2{
+    font-size: 17pt;
+    text-align: center;
+    padding: 5px;
+  }
+
 h3{
     font-size: 1.5em;
     text-align: center;
     line-height: 2;
     color: #ffffff
 }
-
-h2{
-    font-size: 17pt;
-    text-align: center;
-    padding: 5px;
-  }
 
 p {
     padding: 0 30px;
@@ -57,16 +57,20 @@ h4 {
     border: 2px solid black;
   }
 
+  /* add */
+  /* :focus-visible{
+    outline: 3px solid #aaa;
+  } */
 
   .nav_item a{
     padding: 10px;
     color: #eadca6;
     text-align: center;
-
+    text-decoration: none;
   }
-  
-  .nav_item a:hover, a:focus{
-    color: yellow;
+
+  .nav_item a:hover{
+    color: skyblue;
     -webkit-text-decoration-style: dotted;
             text-decoration-style: dotted;
   }
@@ -88,6 +92,11 @@ h4 {
     width: 100%;
   }
 
+  .profilepic{
+    text-align: center;
+    animation: pulse 1s linear infinite both;
+
+  }
 
 .nav_links:visited {
     color: #2196F3;
@@ -120,6 +129,7 @@ h4 {
 } */
 
 .indexP{
+  padding-top: 20px;
   padding-bottom: 40px;
 }
 
@@ -147,7 +157,7 @@ img{
   background: white;
   color: #080808;;
   left: 0;
-  padding: 6px;
+  padding: 0px;
   -webkit-transition: top 1s ease-out;
   transition: top 1s ease-out;
   z-index: 1;
@@ -166,6 +176,76 @@ img{
 
 .legend{
   font-size: 20px;
+}
+
+.box:hover{
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);  
+}
+
+
+.flip-card {
+  text-align: center;
+  background-color: transparent;
+  width: 300px;
+  height: 380px;
+  perspective: 1000px;
+  border-radius: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+}
+
+/* .flip-card:hover .flip-card-inner{
+  transform: rotateY(180deg);
+  text-align: center;
+
+} */
+
+.flip-card a:focus .flip-card-inner{
+  transform: rotateY(180deg);
+  text-align: center;
+  animation: pulse 1s linear infinite both;
+
+
+}
+
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  text-align: center;
+
+}
+
+.flip-card-back {
+  background-color: #a96bfa;
+  color: white;
+  transform: rotateY(180deg);
+  border-radius: 30px;
+  text-align: center;
+  vertical-align: center;
+
+
 }
 
 /* formspree reset */
@@ -277,6 +357,52 @@ img{
   margin-right: 3%;
 }
 
+.parallax {
+  /* The image used */
+  background-image: url('../img/rain.jpg');
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nextPhoto{
+  background-image: url('../img/singaporeSikh.jpg');
+  min-height: 500px; 
+
+}
+
+.rainbow {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3px;
+  color: white;
+  width: 200px;
+  height: 30px;
+  background-color: purple;
+  border-radius: 30px;
+  position: relative;
+  animation-name: example;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes example {
+  0%   {background-color:purple;}
+  25%  {background-color:blueviolet; }
+  50%  {background-color:blue; }
+  75%  {background-color:rgb(8, 8, 54); }
+  100% {background-color:rgb(46, 14, 4); }
+}
 
 @media screen and (min-width: 800px) {
   .grid-container{
@@ -306,3 +432,37 @@ img{
   }
 }
 
+@media screen and (min-width: 850px){
+  .navbar{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      position: sticky;
+      top: 0;
+      padding-left: 0px;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #logo{
+      animation: none;
+  }
+
+  .flip-card{
+    animation: none;
+    background-color: yellow;
+}
+ .profilepic{
+   animation: none;
+ }
+ .rainbow{
+  animation: none;
+}
+.parallax {
+  background-attachment: scroll;
+}
+.nextPhoto{
+  animation: none;
+}
+}
