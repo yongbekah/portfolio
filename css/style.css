@@ -396,19 +396,20 @@ img{
   animation-direction: alternate;
 }
 
+
 @keyframes example {
   0%   {background-color:purple;}
-  25%  {background-color:blueviolet; }
+  25%  {background-color:rgb(40, 150, 135); }
   50%  {background-color:blue; }
   75%  {background-color:rgb(8, 8, 54); }
   100% {background-color:rgb(46, 14, 4); }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 641px) and (max-width: 1007px) {
   .grid-container{
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
     grid-column-gap: 20px;
-    background-color: orange;
+    background-color: indianred;
   }
 
   .nav_links {
@@ -419,7 +420,7 @@ img{
 }
   .container3 {
 	display: grid;
-  grid-template-columns: repeat(3, 2fr);
+  grid-template-columns: repeat(2, 2fr);
 }
 
   .container4{
@@ -432,7 +433,13 @@ img{
   }
 }
 
-@media screen and (min-width: 850px){
+@media screen and (min-width: 1008px){
+  .nav_links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
   .navbar{
       display: flex;
       flex-direction: row;
@@ -442,17 +449,38 @@ img{
       padding-left: 0px;
   }
 
+  .grid-container{
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 20px;
+    background-color: orange;
+  }
+
+  .container4{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .container3 {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+  }
+  .singapore {
+    flex: 1 1;
+  }
+
 }
 
 @media (prefers-reduced-motion: reduce) {
-  #logo{
-      animation: none;
-  }
-
-  .flip-card{
-    animation: none;
-    background-color: yellow;
+  /* .flip-card-front, .flip-card-back{
+    background-color: paleturquoise;
+    transform: none !important;
+} */
+.flip-card{
+  background-color: paleturquoise;
+  transform: none !important;
 }
+
  .profilepic{
    animation: none;
  }
@@ -465,4 +493,10 @@ img{
 .nextPhoto{
   animation: none;
 }
+
+.box:hover{
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);  
+}
+
 }
